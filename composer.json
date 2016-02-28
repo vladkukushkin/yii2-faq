@@ -17,5 +17,5 @@
   "require": {
     "yiisoft/yii2": ">=2.0.6",
     "vova07/yii2-imperavi-widget": "*"
-  },
+  }
 }
