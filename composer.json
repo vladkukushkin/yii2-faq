@@ -1,0 +1,21 @@
+{
+  "name": "vladkukushkin/yii2-faq",
+  "description": "Yii2 FAQ module",
+  "type": "yii2-extension",
+  "keywords": [
+    "yii2",
+    "faq",
+    "module"
+  ],
+  "license": "BSD-3-Clause",
+  "authors": [
+    {
+      "name": "Vladislav Kukushkin",
+      "email": "vladkuk7070@gmail.com"
+    }
+  ],
+  "require": {
+    "yiisoft/yii2": ">=2.0.6",
+    "vova07/yii2-imperavi-widget": "*"
+  },
+}
