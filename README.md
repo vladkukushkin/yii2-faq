@@ -38,8 +38,19 @@ echo \vladkukushkin\faq\widgets\FaqWidget\FaqWidget::widget();
 
 You should define folder to store your images fo FAQ. You can make it by modifying
 DefaultController.php in public function actions().
+
+By default images will be saved in '@frontend/web/upload/faq' directory.
+And you have to add 
+```php
+'frontend.uploads' => 'http://your_site_name/upload'
+```
+to your backend params.php
+
+
 There is [Imperavi widget](https://github.com/vova07/yii2-imperavi-widget)
 used in this module.
+
+
 
 It is possible that you have to change minimum stability section of your 
 composer.json file to dev
