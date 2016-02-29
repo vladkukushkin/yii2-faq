@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use common\models\Faq;
+use vladkukushkin\faq\models\Faq;
+use vladkukushkin\faq\Module;
 
 /* @var $this yii\web\View */
 /* @var $searchModel vladkukushkin\faq\models\search\FaqSearch */

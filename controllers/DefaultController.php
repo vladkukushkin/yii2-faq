@@ -11,9 +11,9 @@ use yii\filters\AccessControl;
 use yii\filters\VerbFilter;
 
 /**
- * FaqController implements the CRUD actions for Faq model.
+ * DefaultController implements the CRUD actions for Faq model.
  */
-class FaqController extends Controller
+class DefaultController extends Controller
 {
     /**
      * Defines the controller behaviors
