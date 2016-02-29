@@ -18,9 +18,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Module::t('faq', 'Create'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -29,7 +28,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             'faq_id',
             'faq_title',
-            'faq_text:ntext',
+            [
+                'attribute' => 'faq_text',
+                'format' => 'raw',
+            ],
             [
                 'attribute' => 'faq_show_on_main',
                 'value' => function ($model) {

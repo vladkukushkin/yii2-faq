@@ -31,12 +31,22 @@ You should add module to your config:
 ```php
 'modules' => [
         ...
-        'faq' => \vladkukushkin\faq\Module::className(),
+        'faq' => [
+                    'class' => \vladkukushkin\faq\Module::className(),
+                    'imagesUrl' => 'http://my_site_name/upload/faq/',
+                    'imagesPath' => '@frontend/web/upload/faq/',//realpath(__DIR__.'/../../../frontend/web/upload/faq/'
+                ],
     ],
 ```
+You should use 'imagesUrl' and 'imagesPath' to define folder to store your images for FAQ.
+This variables should define same directory.
+In above example images will be saved in '@frontend/web/upload/faq' directory.
+You should define both variables because [Imperavi widget](https://github.com/vova07/yii2-imperavi-widget)
+used in this module and they needed to this widget.
+
 If you use advanced project template you should configure both config.php
 
-You can add link to this module in your backend main layout:
+You can add link to this module in your backend navbar:
 ```php
 $menuItems[] = ['label' => 'FAQ', 'url' => ['/faq/default/index']];
 ```
@@ -46,25 +56,16 @@ To display FAQ just add:
 echo \vladkukushkin\faq\widgets\FaqWidget\FaqWidget::widget();
 ```
 
-You should define folder to store your images fo FAQ. You can make it by modifying
-DefaultController.php in public function actions().
-
-By default images will be saved in '@frontend/web/upload/faq' directory.
-And you have to add 
-```php
-'frontend.uploads' => 'http://your_site_name/upload'
-```
-to your backend params.php
-
-
-There is [Imperavi widget](https://github.com/vova07/yii2-imperavi-widget)
-used in this module.
-
-
-
 It is possible that you have to change minimum stability section of your 
 composer.json file to dev
 ```php
 "minimum-stability": "dev",
+```
+
+Module support Russian and English languages.
+By default language for Imperavi widget is Russian ('ru').
+You can change it to English by adding to module config
+```php
+'imperaviLanguage' => 'en'
 ```
 

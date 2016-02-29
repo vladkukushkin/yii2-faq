@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
 use vladkukushkin\faq\models\Faq;
+use vladkukushkin\faq\Module;
 
 /* @var $this yii\web\View */
 /* @var $model vladkukushkin\faq\models\Faq */
@@ -19,7 +20,7 @@ use vladkukushkin\faq\models\Faq;
     <?=
     $form->field($model, 'faq_text')->widget(\vova07\imperavi\Widget::className(), [
         'settings' => [
-            'lang' => 'ru',
+            'lang' => Yii::$app->controller->module->imperaviLanguage,
             'minHeight' => 200,
             'paragraphize' => false,
             'cleanOnPaste' => false,
@@ -41,7 +42,7 @@ use vladkukushkin\faq\models\Faq;
     <?= $form->field($model, 'faq_language')->dropDownList([Yii::$app->language => Yii::$app->language]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton($model->isNewRecord ? Module::t('faq', 'Create') : Module::t('faq', 'Update'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

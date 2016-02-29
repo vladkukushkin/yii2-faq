@@ -2,6 +2,7 @@
 
 namespace vladkukushkin\faq\controllers;
 
+use vladkukushkin\faq\Module;
 use yii\web\Controller;
 use Yii;
 use vladkukushkin\faq\models\Faq;
@@ -57,13 +58,13 @@ class DefaultController extends Controller
         return [
             'image-upload' => [
                 'class' => 'vova07\imperavi\actions\UploadAction',
-                'url' => Yii::$app->params['frontend.uploads'].'/faq/', // Directory URL address, where files are stored.
-                'path' => '@frontend/web/upload/faq/' // Or absolute path to directory where files are stored.
+                'url' => $this->module->imagesUrl, // Directory URL address, where files are stored.
+                'path' => $this->module->imagesPath, // Or absolute path to directory where files are stored.
             ],
             'images-get' => [
                 'class' => 'vova07\imperavi\actions\GetAction',
-                'url' => Yii::$app->params['frontend.uploads'].'/faq/', // Directory URL address, where files are stored.
-                'path' => '@frontend/web/upload/faq/', // Or absolute path to directory where files are stored.
+                'url' => $this->module->imagesUrl, // Directory URL address, where files are stored.
+                'path' => $this->module->imagesPath, // Or absolute path to directory where files are stored.
                 'type' => \vova07\imperavi\actions\GetAction::TYPE_IMAGES,
             ],
         ];

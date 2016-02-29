@@ -7,7 +7,7 @@ use vladkukushkin\faq\Module;
 /* @var $this yii\web\View */
 /* @var $model vladkukushkin\faq\models\Faq */
 
-$this->title = 'Create {modelClass}';
+$this->title = Module::t('faq', 'Create {modelClass}', ['modelClass' => $model->formName()]);
 $this->params['breadcrumbs'][] = ['label' => Module::t('faq', 'FREQUENTLY_ASKED_QUESTIONS'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

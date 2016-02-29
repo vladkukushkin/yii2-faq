@@ -3,6 +3,7 @@
 namespace vladkukushkin\faq;
 
 use Yii;
+use yii\base\InvalidParamException;
 
 /**
  * @author Vladislav Kukushkin <vladkuk7070@gmail.com>
@@ -25,6 +26,21 @@ class Module extends \yii\base\Module
      */
     public $accessRoles = null;
 
+    /**
+     * @var string Directory URL address, where images files are stored. 'http://my_site_name/upload/faq/'
+     */
+    public $imagesUrl = '';
+
+    /**
+     * @var string Alias or absolute path to directory where images files are stored. '@frontend/web/upload/faq/'
+     */
+    public $imagesPath =  '';
+
+    /**
+     * @var string Language selector for ImperaviWidget
+     */
+    public $imperaviLanguage = 'ru';
+
 
     /**
      * Init module
@@ -32,6 +48,10 @@ class Module extends \yii\base\Module
     public function init()
     {
         parent::init();
+        if (!file_exists(Yii::getAlias($this->imagesPath)) || !is_writable(Yii::getAlias($this->imagesPath))) {
+            throw new InvalidParamException();
+        }
+
         $this->registerTranslations();
     }
 
