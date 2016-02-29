@@ -30,6 +30,11 @@ You should add module to your config:
     ],
 ```
 If you use advanced project template you should configure both config.php
+
+You can add link to this module in your backend main layout:
+```php
+$menuItems[] = ['label' => 'FAQ', 'url' => ['/faq/default/index']];
+```
  
 To display FAQ just add:
 ```php
