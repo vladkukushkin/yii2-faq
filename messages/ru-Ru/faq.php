@@ -39,10 +39,11 @@ return [
     '{attribute} "{value}" already exists for this section.' => '',
     'NOT_SHOW_ON_MAIN' => 'Не показывать на главной',
     'SHOW_ON_MAIN' => 'Показывать на главной',
-    'FAQ_ID' => '',
+    'FAQ_ID' => 'ID',
     'FAQ_HEADER' => 'Заголовок',
     'FAQ_CONTENT' => 'Содержание',
     'FAQ_LANGUAGE' => 'Язык',
     'FAQ_IS_SHOW_ON_MAIN' => 'Отображать на главной (да/нет)',
     'FREQUENTLY_ASKED_QUESTIONS' => 'Часто задаваемые вопросы',
-];
+    'NO_DATA' => 'Данные для отображения не найдены'
+ ];

@@ -29,7 +29,7 @@ $faq_id = $id ? $id : 0;
         <?php endforeach;?>
     </div>
 <?php else:?>
-    <h4><?= Yii::t('faq', 'NO_DATA'); ?></h4>
+    <h4><?= Module::t('faq', 'NO_DATA'); ?></h4>
 <?php endif; ?>
 
 

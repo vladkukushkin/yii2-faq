@@ -67,6 +67,7 @@ class Module extends \yii\base\Module
      */
     public static function t($category, $message, $params = [], $language = null)
     {
+        Yii::$app->getModule('faq')->registerTranslations();
         return Yii::t('extensions/yii2-faq/' . $category, $message, $params, $language);
     }
 }
