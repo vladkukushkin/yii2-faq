@@ -39,5 +39,11 @@ echo \vladkukushkin\faq\widgets\FaqWidget\FaqWidget::widget();
 You should define folder to store your images fo FAQ. You can make it by modifying
 DefaultController.php in public function actions().
 There is [Imperavi widget](https://github.com/vova07/yii2-imperavi-widget)
-used in this module
-The module is under construction
+used in this module.
+
+It is possible that you have to change minimum stability section of your 
+composer.json file to dev
+```php
+"minimum-stability": "dev",
+```
+
