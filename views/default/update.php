@@ -1,6 +1,7 @@
 <?php
 
 use yii\helpers\Html;
+use vladkukushkin\faq\Module;
 
 /* @var $this yii\web\View */
 /* @var $model vladkukushkin\faq\models\Faq */

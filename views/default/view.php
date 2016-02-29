@@ -2,7 +2,8 @@
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
-use common\models\Faq;
+use vladkukushkin\faq\models\Faq;
+use vladkukushkin\faq\Module;
 
 /* @var $this yii\web\View */
 /* @var $model vladkukushkin\faq\models\Faq */
