@@ -19,7 +19,7 @@ use vladkukushkin\faq\models\Faq;
     <?=
     $form->field($model, 'faq_text')->widget(\vova07\imperavi\Widget::className(), [
         'settings' => [
-            'lang' => Yii::$app->language,
+            'lang' => 'ru',
             'minHeight' => 200,
             'paragraphize' => false,
             'cleanOnPaste' => false,

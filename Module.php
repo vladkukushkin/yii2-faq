@@ -25,10 +25,6 @@ class Module extends \yii\base\Module
      */
     public $accessRoles = null;
 
-    /**
-     * @var string location of the view file for widget
-     */
-    public $viewPath = '';
 
     /**
      * Init module

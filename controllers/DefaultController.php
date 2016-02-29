@@ -58,12 +58,12 @@ class DefaultController extends Controller
             'image-upload' => [
                 'class' => 'vova07\imperavi\actions\UploadAction',
                 'url' => Yii::$app->params['frontend.uploads'].'/faq/', // Directory URL address, where files are stored.
-                'path' => realpath(__DIR__ . '/../../frontend/web/uploads/faq/') // Or absolute path to directory where files are stored.
+                'path' => '@frontend/web/upload/faq/' // Or absolute path to directory where files are stored.
             ],
             'images-get' => [
                 'class' => 'vova07\imperavi\actions\GetAction',
                 'url' => Yii::$app->params['frontend.uploads'].'/faq/', // Directory URL address, where files are stored.
-                'path' => realpath(__DIR__ . '/../../frontend/web/uploads/faq/'), // Or absolute path to directory where files are stored.
+                'path' => '@frontend/web/upload/faq/', // Or absolute path to directory where files are stored.
                 'type' => \vova07\imperavi\actions\GetAction::TYPE_IMAGES,
             ],
         ];
