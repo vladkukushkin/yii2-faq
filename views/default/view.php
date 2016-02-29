@@ -37,6 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'faq_show_on_main',
                 'value' => Faq::getVisibleOnMain()[$model->faq_show_on_main],
             ],
+            'faq_language'
         ],
     ]) ?>
 

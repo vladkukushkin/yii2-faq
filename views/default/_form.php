@@ -38,6 +38,7 @@ use vladkukushkin\faq\models\Faq;
     ?>
 
     <?= $form->field($model, 'faq_show_on_main')->dropDownList(Faq::getVisibleOnMain()) ?>
+    <?= $form->field($model, 'faq_language')->dropDownList([Yii::$app->language => Yii::$app->language]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

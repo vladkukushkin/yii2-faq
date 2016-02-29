@@ -44,7 +44,7 @@ class Faq extends ActiveRecord
         return [
             [['faq_title', 'faq_text'], 'required'],
             [['faq_text', 'faq_language'], 'string'],
-            [['faq_text'], 'filter', 'trim'],
+            [['faq_text'], 'trim'],
             [['faq_show_on_main'], 'integer'],
             [['faq_show_on_main'], 'in', 'range' => [self::SHOW_ON_MAIN, self::NOT_SHOW_ON_MAIN]],
             [['faq_show_on_main'], 'default', 'value' => self::NOT_SHOW_ON_MAIN],
