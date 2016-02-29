@@ -19,6 +19,11 @@ or add
 
 to the require section of your composer.json file.
 
+Make migration
+```php
+php yii migrate --migrationPath=@vendor/vladkukushkin/yii2-faq/migrations/
+```
+
 ## Usage
 
 You should add module to your config:
