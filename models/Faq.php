@@ -4,6 +4,7 @@ namespace vladkukushkin\faq\models;
 
 use Yii;
 use vladkukushkin\faq\Module;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "{{%faq}}".
