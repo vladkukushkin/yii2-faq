@@ -1,6 +1,6 @@
 <?php
 
-namespace vladkukushkin\faqaq\widgets\FaqWidget;
+namespace vladkukushkin\faq\widgets\FaqWidget;
 
 use vladkukushkin\faq\models\Faq;
 use yii\bootstrap\Widget;

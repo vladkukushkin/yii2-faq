@@ -1,8 +1,10 @@
 <?php
 
+use vladkukushkin\faq\Module;
+
 /* @var $model \vladkukushkin\faq\models\Faq*/
 
-$this->title = Yii::t('faq', 'FREQUENTLY_ASKED_QUESTIONS');
+$this->title = Module::t('faq', 'FREQUENTLY_ASKED_QUESTIONS');
 $this->params['breadcrumbs'][] = $this->title;
 $faq_id = $id ? $id : 0;
 ?>
