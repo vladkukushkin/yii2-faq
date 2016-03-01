@@ -34,7 +34,7 @@ You should add module to your config:
         'faq' => [
                     'class' => \vladkukushkin\faq\Module::className(),
                     'imagesUrl' => 'http://my_site_name/upload/faq/',
-                    'imagesPath' => '@frontend/web/upload/faq/',//realpath(__DIR__.'/../../../frontend/web/upload/faq/'
+                    'imagesPath' => '@frontend/web/upload/faq/',//realpath(__DIR__.'/../../frontend/web/upload/faq/'
                 ],
     ],
 ```

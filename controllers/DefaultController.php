@@ -46,14 +46,16 @@ class DefaultController extends Controller
         parent::actions();
         /*
          * http://www.yiiframework.ru/forum/viewtopic.php?t=22866#p141006
-         * "url" - это ссылка к директории с веб доступом в которой будет загружен
-         * сам файл. Подразумевается что в конкретно данной ситуации загрузка происходит
-         * в временную папку, по этому и УРЛ будет временным.
-         * "path" - это путь к временной папке куда будет загружен файл. Данный
-         * выджет имеет такую логику что он предварительно загружает файл в временную
-         * папку, именно в той что указано в "path". И только при сохранении он
-         * перемещает файл в постоянную папку.
-         * надо указывать одну и туже папку
+         * "url" - this is the link to web-accessible folder where file will be stored. At this time file will be uploaded
+         * in temporary folder, that`s why URL is temporary to.
+         * "path" - this is the path to temporary folder where file will be uploaded. At the beginning widget load file to
+         * the temporary folder which defined by variable "path". And when you save record file will be moved to constant
+         * folder. You should define same folders.
+         * "url" - это ссылка к директории с веб доступом в которой будет загружен сам файл. Подразумевается что
+         * в конкретно данной ситуации загрузка происходит во временную папку, по этому и УРЛ будет временным.
+         * "path" - это путь к временной папке куда будет загружен файл. Данный виджет имеет такую логику что он
+         * предварительно загружает файл в временную папку, именно в той что указано в "path". И только при сохранении
+         * он перемещает файл в постоянную папку. надо указывать одну и туже папку
          */
         return [
             'image-upload' => [

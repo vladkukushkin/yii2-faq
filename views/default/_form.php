@@ -31,8 +31,8 @@ use vladkukushkin\faq\Module;
                 'imagemanager',
 //                'video'
             ],
-            'imageUpload' => Url::to(['/faq/image-upload']),
-            'imageManagerJson' => Url::to(['/faq/images-get']),
+            'imageUpload' => Url::to(['/faq/default/image-upload']),
+            'imageManagerJson' => Url::to(['/faq/default/images-get']),
         ]
     ]);
 

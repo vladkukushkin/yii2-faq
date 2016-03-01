@@ -5,6 +5,7 @@ namespace vladkukushkin\faq\models;
 use Yii;
 use vladkukushkin\faq\Module;
 use yii\db\ActiveRecord;
+use yii\db\Query;
 
 /**
  * This is the model class for table "{{%faq}}".
@@ -64,5 +65,20 @@ class Faq extends ActiveRecord
             'faq_language' => Module::t('faq', 'FAQ_LANGUAGE'),
             'faq_show_on_main' => Module::t('faq', 'FAQ_IS_SHOW_ON_MAIN'),
         ];
+    }
+
+    public static function getLanguageFilter()
+    {
+        $languages = (new Query())
+            ->select('DISTINCT(faq_language)')
+            ->from('{{%faq}}')
+            ->column();
+        $filter = [];
+        if ($languages) {
+            foreach ($languages as $language) {
+                $filter[$language] = $language;
+            }
+        }
+        return $filter;
     }
 }

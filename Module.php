@@ -4,6 +4,8 @@ namespace vladkukushkin\faq;
 
 use Yii;
 use yii\base\InvalidParamException;
+use yii\helpers\VarDumper;
+use yii\web\NotFoundHttpException;
 
 /**
  * @author Vladislav Kukushkin <vladkuk7070@gmail.com>
@@ -50,6 +52,11 @@ class Module extends \yii\base\Module
         parent::init();
         if (!file_exists(Yii::getAlias($this->imagesPath)) || !is_writable(Yii::getAlias($this->imagesPath))) {
             throw new InvalidParamException();
+        }
+
+        $headers = @get_headers($this->imagesUrl);
+        if (strpos($headers[0], '404') !== false) {
+            throw new NotFoundHttpException('Url for images folder not found');
         }
 
         $this->registerTranslations();

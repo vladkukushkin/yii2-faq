@@ -39,7 +39,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 },
                 'filter' => Faq::getVisibleOnMain(),
             ],
-            'faq_language',
+            [
+                'attribute' => 'faq_language',
+                'filter' => Faq::getLanguageFilter(),
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
