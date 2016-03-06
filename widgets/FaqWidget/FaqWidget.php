@@ -13,6 +13,16 @@ class FaqWidget extends Widget
     public $id = false;//faq_id open by default
 
     /**
+     * @var bool|string title for FAQ page
+     */
+    public $title = false;
+
+    /**
+     * @var bool|string breadcrumbs for FAQ page
+     */
+    public $breadcrumbs = false;
+
+    /**
      * @var string path to your view
      */
     public $viewPath = 'faq_list';
@@ -26,6 +36,8 @@ class FaqWidget extends Widget
         return $this->render($this->viewPath, [
             'models' => $models,
             'id' => $this->id,
+            'title' => $this->title,
+            'breadcrumbs' => $this->breadcrumbs,
         ]);
     }
 }

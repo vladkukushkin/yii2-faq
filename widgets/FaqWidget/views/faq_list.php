@@ -4,8 +4,12 @@ use vladkukushkin\faq\Module;
 
 /* @var $model \vladkukushkin\faq\models\Faq*/
 
-$this->title = Module::t('faq', 'FREQUENTLY_ASKED_QUESTIONS');
-$this->params['breadcrumbs'][] = $this->title;
+if ($title) {
+    $this->title = $title;
+}
+if ($breadcrumbs) {
+    $this->params['breadcrumbs'][] = $breadcrumbs;
+}
 $faq_id = $id ? $id : 0;
 ?>
 <?php if ($models):?>

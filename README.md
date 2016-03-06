@@ -34,7 +34,7 @@ You should add module to your config:
         'faq' => [
                     'class' => \vladkukushkin\faq\Module::className(),
                     'imagesUrl' => 'http://my_site_name/upload/faq/',
-                    'imagesPath' => '@frontend/web/upload/faq/',//realpath(__DIR__.'/../../frontend/web/upload/faq/'
+                    'imagesPath' => '@frontend/web/upload/faq/',//realpath(__DIR__.'/../../frontend/web/upload/faq/')
                 ],
     ],
 ```
@@ -45,6 +45,7 @@ You should define both variables because [Imperavi widget](https://github.com/vo
 used in this module and they needed to this widget.
 
 If you use advanced project template you should configure both config.php
+with the same values
 
 You can add link to this module in your backend navbar:
 ```php
@@ -54,6 +55,17 @@ $menuItems[] = ['label' => 'FAQ', 'url' => ['/faq/default/index']];
 To display FAQ just add:
 ```php
 echo \vladkukushkin\faq\widgets\FaqWidget\FaqWidget::widget();
+```
+Widget have two parameters - 'title' and 'breadcrumbs' with default value 'false',
+which means that no title and no breadcrumbs will be applied on page with widget.
+It is useful if you will place widget on existing page with other information.
+If you locate widget on separate page and want to specify title or breadcrumbs
+(or maybe both of them) you can call widget like this:
+```php
+echo \vladkukushkin\faq\widgets\FaqWidget\FaqWidget::widget([
+    'title' => Yii::t('app', 'FAQ'),
+    'breadcrumbs' => Yii::t('app', 'FAQ page'),
+]);
 ```
 
 It is possible that you have to change minimum stability section of your 
